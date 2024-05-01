@@ -11,6 +11,10 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
+      - name: Sender
+        run: |
+          echo "Sender:" ${{ github.event.sender.login }}
+
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v1
 
